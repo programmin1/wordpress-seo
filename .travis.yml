@@ -31,6 +31,8 @@ jobs:
       env: WP_VERSION=latest
     - php: 7.0
       env: WP_VERSION=latest
+    - php: 7.3
+      env: WP_VERSION=5.0
     - php: 5.2
       # As 'trusty' is not supporting PHP 5.2/5.3 anymore, we need to force using 'precise'.
       dist: precise
@@ -221,7 +223,7 @@ script:
   fi
 # Validate the composer.json file.
 # @link https://getcomposer.org/doc/03-cli.md#validate
-- if [[ $TRAVIS_PHP_VERSION == "5.3" || $TRAVIS_PHP_VERSION == "7.2" ]]; then composer validate --no-check-all; fi
+- if [[ $TRAVIS_PHP_VERSION == "5.3" || $TRAVIS_PHP_VERSION == "7.3" ]]; then composer validate --no-check-all; fi
 
 after_script:
 - if [[ "$COVERAGE" == "1" ]]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
