@@ -141,7 +141,7 @@
     "select2": "^4.0.5",
     "styled-components": "^3.2.6",
     "yoast-components": "^4.14.0",
-    "yoastseo": "^1.41.0"
+    "yoastseo": "git+https://github.com/Yoast/YoastSEO.js.git#11356-refactor-precedence-exceptions"
   },
   "yoast": {
     "pluginVersion": "9.0"
